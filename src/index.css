@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600&family=Kreon:wght@300;400;500;600&family=Nunito:wght@200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&family=Rubik:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,*::before,*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: .5s all linear;
+}
+ul,li{
+  list-style: none;
+}
+.shadow{
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.transition_cubic{
+  transform: .6s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+*::-webkit-scrollbar{
+  width: 0px;
+}
+.group_1:hover .group_2{
+  display: block;
+}
+.first:hover .second{
+  display: block;
+}
