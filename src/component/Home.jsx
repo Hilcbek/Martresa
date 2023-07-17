@@ -69,45 +69,45 @@ export const Home = () => {
         <div className='w-9/12 mx-auto'>
             <Marquee className='py-4'>
                 <div className='shadow p-2 rounded-md flex items-center justify-center flex-col mx-2'>
-                    <div className='w-[150px]'>
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQE53ref_VW_PF+watch-49-titanium-ultra_VW_PF_WF_SI+watch-face-49-alpine-ultra_VW_PF_WF_SI?wid=2000&hei=2000&fmt=png-alpha&.v=1683224241054" alt="" />
+                    <div className='w-[100px] h-[100px]'>
+                        <img className='w-full h-full object-containj' src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQE53ref_VW_PF+watch-49-titanium-ultra_VW_PF_WF_SI+watch-face-49-alpine-ultra_VW_PF_WF_SI?wid=2000&hei=2000&fmt=png-alpha&.v=1683224241054" alt="" />
                     </div>
-                    <h1 className='font-bold text-md w-9/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
+                    <h1 className='font-bold text-sm w-7/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
                     <p>0 items</p>
                 </div>
                 <div className='shadow p-2 rounded-md flex items-center justify-center flex-col mx-2'>
-                    <div className='w-[150px]'>
-                        <img src="https://ca.roccat.com/cdn/shop/products/Syn-Max-Air_2x_0f9b98b7-c10d-4730-9188-02a0622c15ca_1100x.png?v=1654682509" alt="" />
+                    <div className='w-[100px] h-[100px]'>
+                        <img className='w-full h-full object-containj' src="https://ca.roccat.com/cdn/shop/products/Syn-Max-Air_2x_0f9b98b7-c10d-4730-9188-02a0622c15ca_1100x.png?v=1654682509" alt="" />
                     </div>
-                    <h1 className='font-bold text-md w-9/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
+                    <h1 className='font-bold text-sm w-7/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
                     <p>0 items</p>
                 </div>
                 <div className='shadow p-2 rounded-md flex items-center justify-center flex-col mx-2'>
-                    <div className='w-[150px]'>
-                        <img src="https://www.iwatani.com/sites/default/files/products/2020-06/product-2-lg-b_0.png" alt="" />
+                    <div className='w-[100px] h-[100px]'>
+                        <img className='w-full h-full object-containj' src="https://www.iwatani.com/sites/default/files/products/2020-06/product-2-lg-b_0.png" alt="" />
                     </div>
-                    <h1 className='font-bold text-md w-9/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
+                    <h1 className='font-bold text-sm w-7/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
                     <p>0 items</p>
                 </div>
                 <div className='shadow p-2 rounded-md flex items-center justify-center flex-col mx-2'>
-                    <div className='w-[150px]'>
-                        <img src="https://egress.storeden.net/gallery/640af73f5fb8e0f4b1efdd31" alt="" />
+                    <div className='w-[100px] h-[100px]'>
+                        <img className='w-full h-full object-containj' src="https://egress.storeden.net/gallery/640af73f5fb8e0f4b1efdd31" alt="" />
                     </div>
-                    <h1 className='font-bold text-md w-9/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
+                    <h1 className='font-bold text-sm w-7/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
                     <p>0 items</p>
                 </div>
                 <div className='shadow p-2 rounded-md flex items-center justify-center flex-col mx-2'>
-                    <div className='w-[150px]'>
-                        <img src="https://ca.roccat.com/cdn/shop/products/Syn-Max-Air_2x_0f9b98b7-c10d-4730-9188-02a0622c15ca_1100x.png?v=1654682509" alt="" />
+                    <div className='w-[100px] h-[100px]'>
+                        <img className='w-full h-full object-containj' src="https://ca.roccat.com/cdn/shop/products/Syn-Max-Air_2x_0f9b98b7-c10d-4730-9188-02a0622c15ca_1100x.png?v=1654682509" alt="" />
                     </div>
-                    <h1 className='font-bold text-md w-9/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
+                    <h1 className='font-bold text-sm w-7/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
                     <p>0 items</p>
                 </div>
                 <div className='shadow p-2 rounded-md flex items-center justify-center flex-col mx-2'>
-                    <div className='w-[150px]'>
-                        <img src="https://www.iwatani.com/sites/default/files/products/2020-06/product-2-lg-b_0.png" alt="" />
+                    <div className='w-[100px] h-[100px]'>
+                        <img className='w-full h-full object-containj' src="https://www.iwatani.com/sites/default/files/products/2020-06/product-2-lg-b_0.png" alt="" />
                     </div>
-                    <h1 className='font-bold text-md w-9/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
+                    <h1 className='font-bold text-sm w-7/12 text-center'>Smart Watch Apple - inc -1 T70 serices</h1>
                     <p>0 items</p>
                 </div>
             </Marquee>

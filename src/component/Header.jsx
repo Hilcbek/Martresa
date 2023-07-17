@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { BiSolidUser} from 'react-icons/bi'
+import { BiMenu, BiSolidUser} from 'react-icons/bi'
 import {AiFillContacts, AiFillHome, AiOutlineMenu, AiOutlineShoppingCart, AiOutlineUserAdd} from 'react-icons/ai'
 import {FiChevronDown, FiMenu} from 'react-icons/fi'
-import {BsChevronUp, BsFillInfoCircleFill} from 'react-icons/bs'
+import {BsChevronCompactDown, BsChevronCompactRight, BsChevronUp, BsFillInfoCircleFill} from 'react-icons/bs'
 import {IoCloseSharp} from 'react-icons/io5'
 import {TiThMenu} from 'react-icons/ti'
 import {FaBlog, FaHornbill} from 'react-icons/fa'
+import { Items } from './Items'
 export const Header = () => {
     let [drop,setDrop] = useState(false)
     let [lang,setLang] = useState(false)
@@ -24,7 +25,7 @@ export const Header = () => {
         hovers.forEach(hover => hover.classList.remove('clicked'))
     }
   return (
-    <nav className='bg-[#fcb800] flex items-start justify-start flex-col xs:py-3 lg:py-0'>
+    <nav className='bg-[#fcb800] relative flex items-start justify-start flex-col xs:py-3 lg:py-0'>
         <div className='flex relative items-center justify-between w-full lg:pl-40 lg:pr-10 xs:py-1 lg:py-6 xs:px-5 lg:px-0'>
             <ul className={`${open ? 'left-0' : 'left-[-110%]'} transition_cubic lg:hidden h-screen absolute z-[999] top-[-12px] bg-white left-0 p-2 transition_cubic w-11/12 overflow-y-scroll overflow-x-auto shadow}`}>
                <div className='w-full flex items-center justify-end'>
@@ -105,26 +106,39 @@ export const Header = () => {
                 </li>
         <div className='w-full bg-white lg:block xs:hidden'>
             <div className='w-9/12 mx-auto py-2 flex items-center justify-between'>
-                <ul className='flex items-center justify-start relative w-3/12 cursor-pointer'>
-                    <li onClick={() => setDep(!dep)} className='flex font-semibold font-Roboto items-center justify-start'>
-                        <TiThMenu />
-                        <p className='ml-2'>All Departments</p>
-                    </li>
-                    <ul className={`absolute top-[30px] bg-white left-0 p-2 rounded-[5px] transition_cubic origin-top max-h-[425px] w-[300px] overflow-y-scroll overflow-x-auto shadow ${dep ? 'scale-100' : 'scale-0'}`}>
-                        <li className='group relative first my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/2560px-Flag_of_Ethiopia.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/2560px-Flag_of_the_Czech_Republic.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/800px-Flag_of_Russia.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/800px-Flag_of_Serbia.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/800px-Flag_of_Saudi_Arabia.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/2560px-Flag_of_Ethiopia.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/2560px-Flag_of_the_Czech_Republic.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/800px-Flag_of_Russia.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/800px-Flag_of_Serbia.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                        <li className='group my-2 flex items-center justify-between border-solid border-b-[1px] p-1 py-2 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/800px-Flag_of_Saudi_Arabia.svg.png" alt="" /><FiChevronDown className={'-rotate-90 group-hover:rotate-90'} /></li>
-                    </ul>
-                </ul>
+                <div className={`mr-4 w-3/12 relative`}>
+                    <button onClick={() =>  setDep(!dep)} className='group-hover:text-[#7d5e0a] flex items-center justify-start'>
+                        <BiMenu className='text-xl' />
+                        <p className='font-Kreon ml-2'>All Departments</p>
+                    </button>
+                    <div className={`${dep ? 'block' : 'hidden'} py-5 z-[999] w-[250px] rounded-sm p-2 px-3 absolute bg-white shadow hover:px-1`}>
+                        <li className='group cursor-pointer group flex items-center justify-between my-1 border-solid border-zinc-300 py-2 border-b-[2px]'>
+                            <p className='font-Kreon group-hover:text-zinc-600'>Furniture</p>
+                            <BsChevronCompactRight className='' />
+                            <ul className='group-hover:flex hidden items-start justify-start flex-col absolute w-[250px] top-0 -right-[250px] bg-white shadow p-2 rounded-sm'>
+                                <li className='border-solid border-zinc-300 w-full py-2 border-b-[2px] flex items-center justify-between'>
+                                    <p>Women</p>
+                                    <ul className='second_hover hidden items-start w-full justify-start flex-col absolute top-5 -right-[250px] bg-white shadow p-2 rounded-md'>
+                                        <li className='border-solid border-zinc-300 py-2 border-b-[2px] w-full flex items-center justify-between'>
+                                            <p>Shoes</p>
+                                            <ul className='third_hover hidden w-full items-start justify-start flex-col absolute top-5 -right-[250px] bg-white shadow p-2 rounded-md'>
+                                                <li className='border-solid border-zinc-300 py-2 border-b-[2px] w-full flex items-center justify-between'><p>Skirts and hot suits</p><BsChevronCompactRight className='' /></li>
+                                                <li className='border-solid border-zinc-300 py-2 border-b-[2px] w-full flex items-center justify-between'><p>Jackets & Sweaters</p><BsChevronCompactRight className='' /></li>
+                                                <li className='border-solid border-zinc-300 py-2 border-b-[2px] w-full flex items-center justify-between'><p>Bra & underwear</p><BsChevronCompactRight className='' /></li>
+                                            </ul>
+                                            <BsChevronCompactRight className='' />
+                                        </li>
+                                        <li className='border-solid border-zinc-300 py-2 border-b-[2px] w-full flex items-center justify-between'><p>Jewelry</p><BsChevronCompactRight className='' /></li>
+                                        <li className='border-solid border-zinc-300 py-2 border-b-[2px] w-full flex items-center justify-between'><p>babi</p><BsChevronCompactRight className='' /></li>
+                                    </ul>
+                                    <BsChevronCompactRight className='' />
+                                </li>
+                                <li className='border-solid border-zinc-300 py-2 border-b-[2px] w-full flex items-center justify-between'><p>Men</p><BsChevronCompactRight className='' /></li>
+                                <li className='border-solid border-zinc-300 py-2 border-b-[2px] w-full flex items-center justify-between'><p>Children ( Age 3-10)</p><BsChevronCompactRight className='' /></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
                 <div className='hovers w-full flex items-center justify-between font-Kreon'>
                     <li className='flex first items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Home</li>
                     <li className='flex items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Shop</li>
@@ -134,7 +148,18 @@ export const Header = () => {
                     <li className='flex items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Hot sales</li>
                 </div>
                 <div className='w-3/12 ml-10'>
-                    h
+                    <button className='flex items-center group justify-center transition_cubic'>
+                        <h1>Recent Viewed</h1>
+                        <BsChevronCompactDown className={'ml-2 group-hover:rotate-180'} />
+                        <div className='hidden grid-cols-5 absolute z-[999] group-hover:grid h-[200px] overflow-y-scroll top-[92%] transition_cubic left-48 w-[1100px] rounded-md shadow bg-white p-3'>
+                            <Items my={'my-1'} />
+                            <Items my={'my-1'} />
+                            <Items my={'my-1'} />
+                            <Items my={'my-1'} />
+                            <Items my={'my-1'} />
+                            <Items my={'my-1'} />
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@ ul,li{
   box-shadow: 0 0 10px rgba(0,0,0,.2);
 }
 .transition_cubic{
-  transform: .6s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 1s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 *::-webkit-scrollbar{
   width: 0px;
