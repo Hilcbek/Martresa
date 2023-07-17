@@ -42,7 +42,7 @@ export const Header = () => {
             <ul className='flex items-center xs:justify-center lg:justify-start xs:w-full lg:w-9/12'>
                  <li onClick={() => setOpen(!open)} className='lg:hidden w-10 h-10 rounded-full xs:hover:bg-black/50 lg:hover:bg-transparent group flex items-center justify-center'><FiMenu className='text-2xl xs:group-hover:text-white lg:group-hover:text-black cursor-pointer' /></li>
                 <li className='lg:mr-10 xs:mx-2 lg:mx-0 xs:w-24 lg:w-auto'>
-                    <img src="https://martretha-dde4ce7a61e7b5411235-20230715143220.local/wp-content/uploads/2022/08/logo.png" alt="" />
+                    <img src="https://martretha.com/wp-content/uploads/2022/08/logo.png" alt="" />
                 </li>
                 <li className='xs:hidden lg:flex items-center justify-start ml-3 w-full bg-white rounded-[5px] relative'>
                     <input type="text" placeholder='Search in 20,000 products in Ethiopia...' className='font-Kreon p-3 rounded-[5px] text-sm tracking-wider outline-none w-full' />
