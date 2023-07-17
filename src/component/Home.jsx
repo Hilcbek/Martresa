@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {BsArrowUpRight} from 'react-icons/bs'
 // Import Swiper styles
@@ -11,26 +11,43 @@ import '../Styles/style.css';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Marquee from "react-fast-marquee";
-import times from "lodash/times";
 import { Footer } from './Footer';
 export const Home = () => {
+    let [time,setTime] = useState('')
+    function formatTimer(val){
+        if(val < 10){
+            return '0'
+        }else{
+            return ''
+        }
+    }
+    function trick() {
+        let d = new Date()
+        let h = d.getHours()
+        let m = d.getMinutes()
+        let s = d.getSeconds()
+        setTime(formatTimer(h) + h + ':' + formatTimer(m) + m + ':' + formatTimer(s) + s)
+    }
+    useEffect(() => {
+        let timerId = setInterval(() => trick(),1000)
+    })
   return (
     <div>
         <div className='lg:bg-[aliceblue]'>
             <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper transition-all duration-1000 ease-linear  w-full"
-      >
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+                }}
+                    pagination={{
+                clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper transition-all duration-1000 ease-linear  w-full"
+            >
         <SwiperSlide className='flex items-center xs:justify-center xs:flex-col lg:flex-row lg:justify-between lg:px-48'>
             <div className='lg:w-[400px] lg:h-[500px]'>
                 <h1 className='xs:text-3xl lg:text-7xl font-Kreon font-bold'>ETHIOPIAN BIG MARKET</h1>
@@ -62,9 +79,9 @@ export const Home = () => {
         </div>
         <div className='w-9/12 mx-auto font-Kreon flex items-center h-40 justify-start'>
             <h1 className='xs:text-xl lg:text-4xl mr-5'>Daily Flash Sale</h1>
-            <div className='w-8 h-8 flex items-center justify-center  mx-1 bg-red-800 text-white rounded-full font-bold'>183</div>:
-            <div className='w-8 h-8 flex items-center justify-center  mx-1 bg-red-800 text-white rounded-full font-bold'>44</div>:
-            <div className='w-8 h-8 flex items-center justify-center  mx-1 bg-red-800 text-white rounded-full font-bold'>55</div>
+            <div className='w-8 h-8 flex items-center justify-center  mx-1 bg-red-800 text-white rounded-full font-bold'>{time.split(":")[0]}</div>:
+            <div className='w-8 h-8 flex items-center justify-center  mx-1 bg-red-800 text-white rounded-full font-bold'>{time.split(":")[1]}</div>:
+            <div className='w-8 h-8 flex items-center justify-center  mx-1 bg-red-800 text-white rounded-full font-bold'>{time.split(":")[2]}</div>
         </div>
         <div className='w-9/12 mx-auto'>
             <Marquee className='py-4'>
