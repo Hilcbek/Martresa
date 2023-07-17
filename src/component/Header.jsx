@@ -14,7 +14,6 @@ export const Header = () => {
     let [dep,setDep] = useState(false)
     let [open,setOpen] = useState(false)
     let hovers = document.querySelectorAll('.hovers li')
-    let langs = document.querySelector('.langs')
     hovers.forEach(hover => {
         hover.addEventListener('click',() => {
             Resetter()
@@ -22,7 +21,6 @@ export const Header = () => {
 
         })
     })
-    langs.addEventListener('click',() => {Resetter()})
     let Resetter = () => {
         hovers.forEach(hover => hover.classList.remove('clicked'))
         setDep(false)
