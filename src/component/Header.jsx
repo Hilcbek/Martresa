@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BiMenu, BiSolidUser} from 'react-icons/bi'
-import {AiFillContacts, AiFillHome, AiOutlineMenu, AiOutlineShoppingCart, AiOutlineUserAdd} from 'react-icons/ai'
+import {AiFillContacts, AiFillHome, AiOutlineMenu, AiOutlineSearch, AiOutlineShoppingCart, AiOutlineUserAdd} from 'react-icons/ai'
 import {FiChevronDown, FiMenu} from 'react-icons/fi'
 import {BsChevronCompactDown, BsChevronCompactRight, BsChevronUp, BsFillInfoCircleFill} from 'react-icons/bs'
 import {IoCloseSharp} from 'react-icons/io5'
@@ -28,7 +28,7 @@ export const Header = () => {
   return (
     <nav className='bg-[#fcb800] relative flex items-start justify-start flex-col xs:py-3 lg:py-0'>
         <div className='flex relative items-center justify-between w-full lg:pl-40 lg:pr-10 xs:py-1 lg:py-6 xs:px-5 lg:px-0'>
-            <ul className={`${open ? 'left-0' : 'left-[-110%]'} transition_cubic lg:hidden h-screen absolute z-[999] top-[-12px] bg-white left-0 p-2 transition_cubic w-11/12 overflow-y-scroll overflow-x-auto shadow}`}>
+            <ul className={`${open ? 'left-0' : 'left-[-110%]'} transition_cubic lg:hidden h-screen absolute z-[999] top-[-12px] bg-[rgba(255,255,255,.95)] left-0 p-2 transition_cubic w-11/12 overflow-y-scroll overflow-x-auto shadow}`}>
                <div className='w-full flex items-center justify-end'>
                     <div onClick={() => setOpen(!open)} className='z-[999] p-1 w-10 h-10 rounded-full hover:bg-black/20 cursor-pointer flex items-center justify-center'>
                     <IoCloseSharp className='text-3xl' />
@@ -103,7 +103,7 @@ export const Header = () => {
                         <li className='my-2 border-solid border-b-[1px] p-1 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'>Kids</li>
                         <li className='my-2 border-solid border-b-[1px] p-1 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'>Kids</li>
                     </ul>
-                    <button className='bg-[#050b26] text-xs text-white py-4 px-1 w-2/12  rounded-r-[5px]'>Search</button>
+                    <button className='bg-[#050b26] flex items-center justify-center text-xs text-white py-4 px-1 w-2/12  rounded-r-[5px]'><AiOutlineSearch /></button>
                 </li>
         <div className='w-full bg-white lg:block xs:hidden'>
             <div className='w-9/12 mx-auto py-2 flex items-center justify-between'>
