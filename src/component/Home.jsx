@@ -176,21 +176,21 @@ export const Home = () => {
         <div className={'xs:w-11/12 lg:w-9/12 mx-auto flex items-start xs:justify-center xs:flex-col lg:flex-row lg:justify-between'}>
             <div className={'xs:w-11/12 lg:w-9/12 mx-auto  flex items-start justify-start flex-col'}>
                 <div>
-                    <img src="https://martretha-dde4ce7a61e7b5411235-20230715143220.local/wp-content/uploads/2020/10/banner-blog.png" alt="" />
+                    <img src="https://martretha.com/wp-content/uploads/2020/10/banner-blog.png" alt="" />
                 </div>
                 <button className='flex items-center justify-center border-solid border-black border-[1px]  p-2 rounded-md font-Kreon my-5 text-xl tracking-wider hover:bg-[#fcb800] hover:tracking-widest group'>Sell All Catagories <BsArrowUpRight className={'ml-2 group-hover:ml-2'} /></button>
             </div>
             <div className={'xs:w-11/12 lg:w-3/12 h-[900px] shadow rounded-xl'}>
-                <img className={'w-full h-full object-cover'} src="https://martretha-dde4ce7a61e7b5411235-20230715143220.local/wp-content/uploads/2022/04/Untitled-design-15.png" alt="" />
+                <img className={'w-full h-full object-cover'} src="https://martretha.com/wp-content/uploads/2022/04/Untitled-design-15.png" alt="" />
             </div>
         </div>
         <div className={'xs:w-11/12 lg:w-9/12 mx-auto flex items-start xs:justify-center xs:flex-col lg:flex-row lg:justify-between'}>
             <div className={'xs:w-11/12 lg:w-3/12 h-[900px] shadow rounded-xl'}>
-                <img className={'w-full h-full object-cover'} src="https://martretha-dde4ce7a61e7b5411235-20230715143220.local/wp-content/uploads/2022/04/W-O-M-E-N-F-A-S-H-I-O-N.png" alt="" />
+                <img className={'w-full h-full object-cover'} src="https://martretha.com/wp-content/uploads/2022/04/W-O-M-E-N-F-A-S-H-I-O-N.png" alt="" />
             </div>
             <div className={'xs:w-11/12 lg:w-9/12 flex items-center justify-start flex-col ml-5'}>
                 <div>
-                    <img className='w-full h-full object-cover' src="https://martretha-dde4ce7a61e7b5411235-20230715143220.local/wp-content/uploads/2020/10/banner-blog.png" alt="" />
+                    <img className='w-full h-full object-cover' src="https://martretha.com/wp-content/uploads/2020/10/banner-blog.png" alt="" />
                 </div>
                 <button className='flex items-center justify-center border-solid border-black border-[1px]  p-2 rounded-md font-Kreon my-5 text-xl tracking-wider hover:bg-[#fcb800] hover:tracking-widest group'>Sell All Catagories <BsArrowUpRight className={'ml-2 group-hover:ml-2'} /></button>
             </div>
