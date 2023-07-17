@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import '../Styles/style.css';
-
+import {motion} from 'framer-motion'
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Marquee from "react-fast-marquee";
@@ -49,31 +49,31 @@ export const Home = () => {
                 className="mySwiper transition-all duration-1000 ease-linear  w-full"
             >
         <SwiperSlide className='flex items-center xs:justify-center xs:flex-col lg:flex-row lg:justify-between lg:px-48'>
-            <div className='lg:w-[400px] lg:h-[500px]'>
+            <motion.div transition={{duration : 1}} animate={{opacity : 1}} initial={{opacity : 0}} className='lg:w-[400px] lg:h-[500px]'>
                 <h1 className='xs:text-3xl lg:text-7xl font-Kreon font-bold'>ETHIOPIAN BIG MARKET</h1>
                 <button className='bg-[#fcb800] text-black p-2 rounded-md cursor-pointer my-2 font-bold font-Kreon tracking-wider hover:tracking-widest'>Become a vender</button>
-            </div>
-            <div className='lg:w-[400px] lg:h-[500px]'>
+            </motion.div>
+            <motion.div transition={{duration : 1}} animate={{opacity : 1}} initial={{opacity : 0}} className='lg:w-[400px] lg:h-[500px]'>
                 <img className='w-full h-full object-contain' src="https://prosteps.cloudimg.io/v7m/resizeinbox/1000x1000/fsharp0/https://tilroy.s3.eu-west-1.amazonaws.com/175/product/Runnerslab-ADIDAS-x-city-hoodie-heren-men-HR3286-black-online-kopen-2.png" alt="" />
-            </div>
+            </motion.div>
         </SwiperSlide>
         <SwiperSlide className='flex items-center xs:justify-center xs:flex-col lg:flex-row lg:justify-between lg:px-48'>
-            <div className='lg:w-[400px] lg:h-[500px]'>
+            <motion.div transition={{duration : 1}} animate={{opacity : 1}} initial={{opacity : 0}} className='lg:w-[400px] lg:h-[500px]'>
                 <img className='w-full object-cover h-full' src="https://prosteps.cloudimg.io/v7m/resizeinbox/1000x1000/fsharp0/https://tilroy.s3.eu-west-1.amazonaws.com/175/product/Runnerslab-ADIDAS-own-the-run-jacket-heren-men-dark-blue-IC2636-loopjas-online-kopen-2.png" alt="" />
-            </div>
-            <div>
+            </motion.div>
+            <motion.div transition={{duration : 1}} animate={{opacity : 1}} initial={{opacity : 0}}>
                 <h1 className='xs:text-3xl lg:text-7xl font-Kreon font-bold'>ETHIOPIAN BIG MARKET</h1>
                 <button className='bg-[#fcb800] text-black p-2 rounded-md cursor-pointer my-2 font-bold font-Kreon tracking-wider hover:tracking-widest'>Become a vender</button>
-            </div>
+            </motion.div>
         </SwiperSlide>
         <SwiperSlide className='flex items-center xs:justify-center xs:flex-col lg:flex-row lg:justify-between lg:px-48'>
-            <div>
+            <motion.div transition={{duration : 1}} animate={{opacity : 1}} initial={{opacity : 0}}>
                 <h1 className='xs:text-3xl lg:text-7xl font-Kreon font-bold'>ETHIOPIAN BIG MARKET</h1>
                 <button className='bg-[#fcb800] text-black p-2 rounded-md cursor-pointer my-2 font-bold font-Kreon tracking-wider hover:tracking-widest'>Become a vender</button>
-            </div>
-            <div className='w-[400px] h-[500px]'>
+            </motion.div>
+            <motion.div transition={{duration : 1}} animate={{opacity : 1}} initial={{opacity : 0}} className='w-[400px] h-[500px]'>
                 <img src="https://speedsports.pk/pub/media/catalog/product/cache/9d08971813a040f8f96067a40f75c615/h/l/hl1976_1_apparel_photography_front_view_transparent_5.png" alt="" />
-            </div>
+            </motion.div>
         </SwiperSlide>
       </Swiper>
         </div>

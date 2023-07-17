@@ -7,6 +7,7 @@ import {IoCloseSharp} from 'react-icons/io5'
 import {TiThMenu} from 'react-icons/ti'
 import {FaBlog, FaHornbill} from 'react-icons/fa'
 import { Items } from './Items'
+import {motion} from 'framer-motion'
 export const Header = () => {
     let [drop,setDrop] = useState(false)
     let [lang,setLang] = useState(false)
@@ -139,14 +140,14 @@ export const Header = () => {
                         </li>
                     </div>
                 </div>
-                <div className='hovers w-full flex items-center justify-between font-Kreon'>
+                <motion.div initial={{opacity : '0'}} animate={{opacity : '1' }} transition={{ duration: 0.5 }} className='hovers w-full flex items-center justify-between font-Kreon'>
                     <li className='flex first items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Home</li>
                     <li className='flex items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Shop</li>
                     <li className='flex items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Brand Shops</li>
                     <li className='flex items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Become Vendor</li>
                     <li className='flex items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Become An Affiliate</li>
                     <li className='flex items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Hot sales</li>
-                </div>
+                </motion.div>
                 <div className='w-3/12 ml-10'>
                     <button className='flex items-center group justify-center transition_cubic'>
                         <h1>Recent Viewed</h1>
