@@ -26,9 +26,9 @@ export const Header = () => {
   return (
     <nav className='bg-[#fcb800] flex items-start justify-start flex-col xs:py-3 lg:py-0'>
         <div className='flex relative items-center justify-between w-full lg:pl-40 lg:pr-10 xs:py-1 lg:py-6 xs:px-5 lg:px-0'>
-            <ul className={`${open ? 'left-0' : '-left-[110%]'} transition_cubic lg:hidden h-screen absolute z-[999] top-[-12px] bg-white left-0 p-2 transition_cubic w-11/12 overflow-y-scroll overflow-x-auto shadow}`}>
+            <ul className={`${open ? 'left-0' : 'left-[-110%]'} transition_cubic lg:hidden h-screen absolute z-[999] top-[-12px] bg-white left-0 p-2 transition_cubic w-11/12 overflow-y-scroll overflow-x-auto shadow}`}>
                <div className='w-full flex items-center justify-end'>
-                    <div onClick={() => setOpen(!open)} className='p-1 w-10 h-10 rounded-full hover:bg-black/20 cursor-pointer flex items-center justify-center'>
+                    <div onClick={() => setOpen(!open)} className='z-[999] p-1 w-10 h-10 rounded-full hover:bg-black/20 cursor-pointer flex items-center justify-center'>
                     <IoCloseSharp className='text-3xl' />
                 </div>
                </div>
