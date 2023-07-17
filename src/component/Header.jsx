@@ -46,7 +46,7 @@ export const Header = () => {
                 <li className='xs:hidden lg:flex items-center justify-start ml-3 w-full bg-white rounded-[5px] relative'>
                     <input type="text" placeholder='Search in 20,000 products in Ethiopia...' className='font-Kreon p-3 rounded-[5px] text-sm tracking-wider outline-none w-full' />
                     <button onClick={() => setDrop(!drop)} className='mr-2 flex items-center justify-start font-bold text-xs font-Kreon tracking-wider'>Filter<FiChevronDown className={`cursor-pointer font-bold text-xl transition_cubic  ${drop ? '-rotate-180' : 'rotate-0'}`} /></button>
-                    <ul className={`absolute top-[48.5px] bg-white right-0 p-2 rounded-[5px] transition_cubic origin-top max-h-[225px] overflow-y-scroll shadow w-3/12 ${drop ? 'scale-100' : 'scale-0'}`}>
+                    <ul className={`absolute top-[48.5px] z-[999] bg-white right-0 p-2 rounded-[5px] transition_cubic origin-top max-h-[225px] overflow-y-scroll shadow w-3/12 ${drop ? 'scale-100' : 'scale-0'}`}>
                         <li className='my-2 border-solid border-b-[1px] p-1 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'>Man</li>
                         <li className='my-2 border-solid border-b-[1px] p-1 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'>Clothing</li>
                         <li className='my-2 border-solid border-b-[1px] p-1 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'>Toodler</li>
