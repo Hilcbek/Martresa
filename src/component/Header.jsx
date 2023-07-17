@@ -14,16 +14,23 @@ export const Header = () => {
     let [dep,setDep] = useState(false)
     let [open,setOpen] = useState(false)
     let hovers = document.querySelectorAll('.hovers li')
+    let langs = document.querySelector('.langs')
     hovers.forEach(hover => {
         hover.addEventListener('click',() => {
             Resetter()
             hover.classList.add('clicked')
-            console.log('jj')
 
         })
     })
+    langs.addEventListener('click',() => {Resetter()})
     let Resetter = () => {
         hovers.forEach(hover => hover.classList.remove('clicked'))
+        setDep(false)
+        setLang(false)
+    }
+    let Reset = () => {
+        hovers.forEach(hover => hover.classList.remove('clicked'))
+        setLang(false)
     }
   return (
     <nav className='bg-[#fcb800] relative flex items-start justify-start flex-col xs:py-3 lg:py-0'>
@@ -78,7 +85,7 @@ export const Header = () => {
                         <p className='font-Kreon tracking-wide'>En</p>
                         <FiChevronDown className='ml-1' />
                     </li>
-                    <ul className={`absolute top-[40.5px] bg-white z-[999] right-2 p-2 rounded-[5px] transition_cubic origin-top max-h-[225px] w-full overflow-y-scroll shadow ${lang ? 'scale-100' : 'scale-0'}`}>
+                    <ul className={`absolute top-[40.5px] langs bg-white z-[999] right-2 p-2 rounded-[5px] transition_cubic origin-top max-h-[225px] w-full overflow-y-scroll shadow ${lang ? 'scale-100' : 'scale-0'}`}>
                         <li className='text-xs my-2 flex items-center justify-start border-solid border-b-[1px] p-1 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/2560px-Flag_of_Ethiopia.svg.png" alt="" /><span>Amharic</span></li>
                         <li className='text-xs my-2 flex items-center justify-start border-solid border-b-[1px] p-1 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/2560px-Flag_of_the_Czech_Republic.svg.png" alt="" /><span>Czech</span> </li>
                         <li className='text-xs my-2 flex items-center justify-start border-solid border-b-[1px] p-1 cursor-pointer hover:pl-2 transition_cubic font-semibold hover:text-black/60'><img className='w-12 mr-2' src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png" alt="" /><span>English</span></li>
@@ -108,11 +115,11 @@ export const Header = () => {
         <div className='w-full bg-white lg:block xs:hidden'>
             <div className='w-9/12 mx-auto py-2 flex items-center justify-between'>
                 <div className={`mr-4 w-3/12 relative`}>
-                    <button onClick={() =>  setDep(!dep)} className='group-hover:text-[#7d5e0a] flex items-center justify-start'>
+                    <button onClick={() =>  {setDep(!dep); Reset()}} className='group-hover:text-[#7d5e0a] flex items-center justify-start'>
                         <BiMenu className='text-xl' />
                         <p className='font-Kreon ml-2'>All Departments</p>
                     </button>
-                    <div className={`${dep ? 'block' : 'hidden'} py-5 z-[999] w-[250px] rounded-sm p-2 px-3 absolute bg-white shadow hover:px-1`}>
+                    <div className={`${dep ? 'block' : 'hidden'} deps py-5 z-[999] w-[250px] rounded-sm p-2 px-3 absolute bg-white shadow hover:px-1`}>
                         <li className='group cursor-pointer group flex items-center justify-between my-1 border-solid border-zinc-300 py-2 border-b-[2px]'>
                             <p className='font-Kreon group-hover:text-zinc-600'>Furniture</p>
                             <BsChevronCompactRight className='' />
