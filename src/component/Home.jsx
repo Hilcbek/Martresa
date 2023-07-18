@@ -12,6 +12,7 @@ import { LazyMotion, domAnimation, motion } from "framer-motion"
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Marquee from "react-fast-marquee";
 import { Footer } from './Footer';
+import { AiOutlineArrowUp } from 'react-icons/ai';
 export const Home = () => {
     let [time,setTime] = useState('')
     function formatTimer(val){
@@ -31,8 +32,25 @@ export const Home = () => {
     useEffect(() => {
         let timerId = setInterval(() => trick(),1000)
     })
+    let setScroll = () => {
+        window.scrollTo({
+            top : 0,
+            behavior : 'smooth'
+        })
+    }
+    window.onscroll = (e) => {
+        if(window.scrollY > 200)
+            {document.querySelector('.arrow').style.display = 'block'
+            document.querySelector('.arrow').style.transition = '.5s all linear'}
+        else
+            {document.querySelector('.arrow').style.display = 'none'
+            document.querySelector('.arrow').style.transition = '.5s all linear'}
+    }
   return (
     <div>
+        <div onClick={() => setScroll()} className='arrow p-2 rounded-md hidden bg-[#fcb800] border-solid transition-all duration-700 ease-linear cursor-pointer shadow-xl shadow-black border-black border-[1px] fixed group bottom-5 right-5'>
+            <AiOutlineArrowUp className='text-xl group-hover:text-xl' />
+        </div>
         <div className='lg:bg-[aliceblue]'>
             <Swiper
                 spaceBetween={30}
