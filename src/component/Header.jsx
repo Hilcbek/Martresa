@@ -18,6 +18,7 @@ export const Header = () => {
         hover.addEventListener('click',() => {
             Resetter()
             hover.classList.add('clicked')
+            console.log('clicked')
 
         })
     })
@@ -29,6 +30,9 @@ export const Header = () => {
     let Reset = () => {
         hovers.forEach(hover => hover.classList.remove('clicked'))
         setLang(false)
+    }
+    window.onload = () => {
+        document.querySelector('.hovers .first').classList.add('clicked')
     }
   return (
     <nav className='bg-[#fcb800] relative flex items-start justify-start flex-col xs:py-3 lg:py-0'>
@@ -146,7 +150,7 @@ export const Header = () => {
                     </div>
                 </div>
                 <motion.div initial={{opacity : '0'}} animate={{opacity : '1' }} transition={{ duration: 0.5 }} className='hovers w-full flex items-center justify-between font-Kreon'>
-                    <li className='flex first items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Home</li>
+                    <li className='first flex first items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Home</li>
                     <li className='flex items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Shop</li>
                     <li className='flex items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Brand Shops</li>
                     <li className='flex items-center justify-center mx-2 relative before:absolute before:left-0 before:-bottom-1 before:content-[""] before:bg-[#fcb800] before:w-0 hover:before:w-full cursor-pointer transition_cubic before:h-1 before:rounded-md'>Become Vendor</li>
